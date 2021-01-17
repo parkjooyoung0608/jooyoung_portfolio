@@ -201,7 +201,7 @@ p {
   border: 1px solid var(--color-blue);
   border-radius: 50%;
   margin-bottom: 16px;
-  /* margin: auto; */
+  margin: auto;
 }
 
 .major__icon i {
@@ -403,4 +403,47 @@ p {
   height: 2px;
   background-color: var(--color-dark-white);
   margin-top: 8px;
+}
+
+/* Testimonial */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-dark-blue);
+  cursor: pointer;
 }
