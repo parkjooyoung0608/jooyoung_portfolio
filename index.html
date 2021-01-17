@@ -52,7 +52,7 @@
     </section>
     
     <!-- About me -->
-    <section id="about" class="section">
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <p>나에대해 어필할 문장 2~3문장 (경력에 대해서도 들어가면 좋음)</p>
         <div class="about__majors">
@@ -92,63 +92,65 @@
     
     <!-- Skills -->
     <section id="skills" class="section">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <p>
-            새로운 기술을 배우려는 열정. 
-            팀 환경 내에서 협동적으로 작업 할 수 있습니다. 
-            일정을 계획하고 시간을 정하고 엄격한 시간 압박을 받고 작업합니다.
-        </p>
-        <div class="skillset">
-            <div class="skillset__left">
-                <h3 class="skillset__title">Skills</h3>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>HTML</span>
-                        <span>90%</span>
+        <div class="section__container">
+            <h1>Skills</h1>
+            <h2>Skills & Attributes</h2>
+            <p>
+                새로운 기술을 배우려는 열정. 
+                팀 환경 내에서 협동적으로 작업 할 수 있습니다. 
+                일정을 계획하고 시간을 정하고 엄격한 시간 압박을 받고 작업합니다.
+            </p>
+            <div class="skillset">
+                <div class="skillset__left">
+                    <h3 class="skillset__title">Skills</h3>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
                     </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>JAVASCRIPT</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="skill__bar">
+                            <div class="skill__value" style="width: 50%;"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>CSS</span>
-                        <span>90%</span>
+                <div class="skillset__right">
+                    <div class="tools">
+                        <h3 class="skillset__title">Tools</h3>
+                        <ul class="tools__list">
+                            <li>Visual Studio Code</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Exel</li>
+                            <li>Access</li>
+                            <li>Git</li>
+                        </ul>
                     </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
+                    <div class="certificate">
+                        <h3 class="skillset__title">Certificate</h3>
+                        <ul class="etc">
+                            <li>웹디자인기능사</li>
+                            <li>ACA Photoshop CC 2015</li>
+                            <li>컴퓨터활용능력 1급</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="skill">
-                    <div class="skill__description">
-                        <span>JAVASCRIPT</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill__bar">
-                        <div class="skill__value"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skillset__right">
-                <div class="tools">
-                    <h3 class="skillset__title">Tools</h3>
-                    <ul class="tools__list">
-                        <li>Visual Studio Code</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Exel</li>
-                        <li>Access</li>
-                        <li>Git</li>
-                    </ul>
-                </div>
-                <div class="certificate">
-                    <h3 class="skillset__title">Certificate</h3>
-                    <ul class="etc">
-                        <li>웹디자인기능사</li>
-                        <li>ACA Photoshop CC 2015</li>
-                        <li>컴퓨터활용능력 1급</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -212,25 +214,27 @@
     
     <!-- Testimonials -->
     <section id="testimonials" class="section">
-        <h1>Testimonials</h1>
-        <h3>나에 대한 사람들의 의견</h3>
-        <div class="testimonials">
-            <div class="testimnonial">
-                <img src="asset/profile.jpg" alt="사람1(임시)" class="testimonial__avatar">
-                <div class="testimonial__speech-bubble">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa ea quisquam distinctio sint repudiandae quo at, assumenda quasi laboriosam neque, perspiciatis officiis. Tempore corporis, distinctio laborum voluptas deserunt eligendi quisquam.
-                    <div class="name">
-                        <a href="#">임시이름</a>/임시회사이름
-                    </div>
-                </div>
+        <div class="section__container">
+            <h1>Testimonials</h1>
+            <h3>나에 대한 사람들의 의견</h3>
+            <div class="testimonials">
                 <div class="testimnonial">
+                    <img src="asset/profile.jpg" alt="사람1(임시)" class="testimonial__avatar">
                     <div class="testimonial__speech-bubble">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa ea quisquam distinctio sint repudiandae quo at, assumenda quasi laboriosam neque, perspiciatis officiis. Tempore corporis, distinctio laborum voluptas deserunt eligendi quisquam.
                         <div class="name">
                             <a href="#">임시이름</a>/임시회사이름
                         </div>
                     </div>
-                    <img src="asset/profile.jpg" alt="사람1(임시)" class="testimonial__avatar">
+                    <div class="testimnonial">
+                        <div class="testimonial__speech-bubble">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa ea quisquam distinctio sint repudiandae quo at, assumenda quasi laboriosam neque, perspiciatis officiis. Tempore corporis, distinctio laborum voluptas deserunt eligendi quisquam.
+                            <div class="name">
+                                <a href="#">임시이름</a>/임시회사이름
+                            </div>
+                        </div>
+                        <img src="asset/profile.jpg" alt="사람1(임시)" class="testimonial__avatar">
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,14 +242,16 @@
     
     <!-- Contact -->
     <section id="contact" class="section">
-        <h1 class="contact__title">Let's talk</h1>
-        <h2 class="contact__email">mirkduddl@naver.com</h2>
-        <div class="contact__link">
-            <a href="#" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
+        <div class="section__container">
+            <h1 class="contact__title">Let's talk</h1>
+            <h2 class="contact__email">mirkduddl@naver.com</h2>
+            <div class="contact__link">
+                <a href="#" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <p class="contact__right">2021 Coding Jooyoung - All right reserved</p>
         </div>
-        <p class="contact__right">2021 Coding Jooyoung - All right reserved</p>
     </section>
 </body>
 </html>
