@@ -101,7 +101,13 @@ p {
   width: 100%;
   padding: 16px;
   background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-blue);
+  box-shadow: 1px 1px 5px var(--color-blue);
 }
 
 .navbar__logo {
