@@ -167,17 +167,19 @@
             <h1>My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn selected">All<span class="category__count">4</span></button>
-                <button class="category__btn">PC Html+Css<span class="category__count">1</span></button>
-                <button class="category__btn">Moblie<span class="category__count">1</span></button>
-                <button class="category__btn">Responsive<span class="category__count">2</span></button>
+                <button class="category__btn selected" data-filter="*">All<span class="category__count">4</span></button>
+                <button class="category__btn" data-filter="pc">PC Html+Css<span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="moblie">Moblie<span class="category__count">1</span></button>
+                <button class="category__btn" data-filter="responsive">Responsive<span class="category__count">2</span></button>
             </div>
         </div>
         <div class="work__projects">
             <a 
                 href="#" 
                 class="project"
-                target="blank">
+                target="blank"
+                data-type="pc"
+                >
                 <img src="asset/profile.jpg" alt="프로젝트 이미지 임시" class="project__img">
                 <div class="project__description">
                     <h3>Youtube Site(임시제목)</h3>
@@ -187,7 +189,9 @@
             <a 
                 href="#" 
                 class="project"
-                target="blank">
+                target="blank"
+                data-type="moblie"
+                >
                 <img src="asset/profile.jpg" alt="프로젝트 이미지 임시" class="project__img">
                 <div class="project__description">
                     <h3>Youtube Site(임시제목)</h3>
@@ -197,7 +201,9 @@
             <a 
                 href="#" 
                 class="project"
-                target="blank">
+                target="blank"
+                data-type="responsive"
+                >
                 <img src="asset/profile.jpg" alt="프로젝트 이미지 임시" class="project__img">
                 <div class="project__description">
                     <h3>Youtube Site(임시제목)</h3>
@@ -207,7 +213,9 @@
             <a 
                 href="#" 
                 class="project"
-                target="blank">
+                target="blank"
+                data-type="responsive"
+                >
                 <img src="asset/profile.jpg" alt="프로젝트 이미지 임시" class="project__img">
                 <div class="project__description">
                     <h3>Youtube Site(임시제목)</h3>

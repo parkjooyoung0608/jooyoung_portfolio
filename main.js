@@ -65,6 +65,36 @@ arrowUpBtn.addEventListener('click', () => {
     scrollIntoView('#home')
 })
 
+// Work project filtering
+// 1. categoryBtn click -> project filtering
+// 2. category data-filter = project data-type 
+const categories = document.querySelector('.work__categories')
+const projectContainer = document.querySelector('.work__projects')
+const projects = document.querySelectorAll('.project')
+const categoryBtn = document.querySelectorAll('.category__btn')
+
+categories.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter
+    if(filter === null) {
+        return
+    }
+
+    // 선택되어진 selected없애기
+    const active = document.querySelector('.category__btn.selected')    
+    active.classList.remove('selected')
+    // click한 target이 BUTTON이면 e.target 아니면 e.target.parentNode 
+    //  selected 추가하기
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode
+    target.classList.add('selected')
+
+    projects.forEach((project) => {
+        if(filter==='*'|| filter === project.dataset.type) {
+            project.classList.remove('invisible')
+        } else {
+            project.classList.add('invisible')
+        }
+    })
+})
 
 
 
