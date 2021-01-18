@@ -13,3 +13,21 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
 });
+
+// Navbar menu click시 해당 section으로 scrolling
+// * data-link & scrollIntoVoew활용
+
+const navbarMenu = document.querySelector('.navbar__menu')
+const navbarMenuItem = document.querySelectorAll('.navbar__menu__item')
+
+navbarMenu.addEventListener('click', (e) => {
+    const link = e.target.dataset.link
+    if(link === null) {
+        return
+    }
+
+    navbarMenuItem.forEach((item) => {
+        const scrollTo = document.querySelector(link)
+        scrollTo.scrollIntoView({behavior: "smooth"})
+    })
+})
