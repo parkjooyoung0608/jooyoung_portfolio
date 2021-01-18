@@ -16,7 +16,6 @@ document.addEventListener('scroll', () => {
 
 // Navbar menu click시 해당 section으로 scrolling
 // * data-link & scrollIntoVoew활용
-
 const navbarMenu = document.querySelector('.navbar__menu')
 const navbarMenuItem = document.querySelectorAll('.navbar__menu__item')
 
@@ -27,7 +26,20 @@ navbarMenu.addEventListener('click', (e) => {
     }
 
     navbarMenuItem.forEach((item) => {
-        const scrollTo = document.querySelector(link)
-        scrollTo.scrollIntoView({behavior: "smooth"})
+        scrollIntoView(link)
     })
 })
+
+//Home "Contact Me" btn click -> contact로 이동
+const contactBtn = document.querySelector('.home__contact')
+const contact = document.querySelector('#contact')
+
+contactBtn.addEventListener('click', () => {
+    scrollIntoView('#contact')
+})
+
+// Function ScrollIntoView
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector)
+    scrollTo.scrollIntoView({behavior: "smooth"})
+}
