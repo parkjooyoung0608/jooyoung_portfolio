@@ -51,6 +51,20 @@ document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight 
 })
 
+// Arrow up button
+const arrowUpBtn = document.querySelector('.arrow-up')
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight / 2) {
+        arrowUpBtn.classList.add('show')
+    } else {
+        arrowUpBtn.classList.remove('show')
+    }
+})
+
+arrowUpBtn.addEventListener('click', () => {
+    scrollIntoView('#home')
+})
+
 
 
 
