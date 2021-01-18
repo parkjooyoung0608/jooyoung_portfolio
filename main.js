@@ -24,10 +24,16 @@ navbarMenu.addEventListener('click', (e) => {
     if(link === null) {
         return
     }
-
+    navbarMenu.classList.remove('show')
     navbarMenuItem.forEach((item) => {
         scrollIntoView(link)
     })
+})
+
+// Navbar toggle button (미디어쿼리)
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn')
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('show')
 })
 
 //Home "Contact Me" btn click -> contact로 이동

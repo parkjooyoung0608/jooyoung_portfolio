@@ -552,6 +552,10 @@ p {
     display: none;
   }
 
+  .navbar__menu.show {
+    display: block;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -559,7 +563,7 @@ p {
   /* Section_mobile */
   .section {
     padding: 16px;
-    /* padding-top: 40px; */
+    padding-top: 40px;
   }
 
   /* Home_mobile */
