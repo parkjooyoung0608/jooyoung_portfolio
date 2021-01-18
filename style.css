@@ -136,11 +136,8 @@ p {
   border: 1px solid transparent;
 }
 
+.navbar__menu__item:hover,
 .navbar__menu__item.active {
-  border: 1px solid var(--color-black);
-}
-
-.navbar__menu__item:hover {
   border: 1px solid var(--color-black);
   background-color: var(--color-dark-blue);
 }
@@ -368,6 +365,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {

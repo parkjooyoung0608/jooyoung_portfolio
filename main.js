@@ -17,14 +17,13 @@ document.addEventListener('scroll', () => {
 // Navbar menu click시 해당 section으로 scrolling
 // * data-link & scrollIntoVoew활용
 const navbarMenu = document.querySelector('.navbar__menu')
-const navbarMenuItem = document.querySelectorAll('.navbar__menu__item')
-
+const navbarMenuItem=document.querySelectorAll('.navbar__menu__item')
 navbarMenu.addEventListener('click', (e) => {
     const link = e.target.dataset.link
     if(link === null) {
         return
     }
-    navbarMenu.classList.remove('show')
+
     navbarMenuItem.forEach((item) => {
         scrollIntoView(link)
     })
@@ -52,7 +51,6 @@ contactBtn.addEventListener('click', () => {
 //  : 1 - window.scrollY (800px) / homeHeight(800px) = 0 (opacity 값)
 const home = document.querySelector('.home__container')
 const homeHeight = home.getBoundingClientRect().height;
-
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight 
 })
@@ -84,6 +82,17 @@ categories.addEventListener('click', (e) => {
     if(filter === null) {
         return
     }
+    projectContainer.classList.add('anim-out')
+    setTimeout(()=>{
+        projects.forEach((project) => {
+            if(filter==='*'|| filter === project.dataset.type) {
+                project.classList.remove('invisible')
+            } else {
+                project.classList.add('invisible')
+            }
+        })
+        projectContainer.classList.remove('anim-out')
+    }, 300)
 
     // 선택되어진 selected없애기
     const active = document.querySelector('.category__btn.selected')    
@@ -93,13 +102,8 @@ categories.addEventListener('click', (e) => {
     const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode
     target.classList.add('selected')
 
-    projects.forEach((project) => {
-        if(filter==='*'|| filter === project.dataset.type) {
-            project.classList.remove('invisible')
-        } else {
-            project.classList.add('invisible')
-        }
-    })
+    
+
 })
 
 
